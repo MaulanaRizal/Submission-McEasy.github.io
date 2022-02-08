@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>McEasy | Login User</title>
+  <link rel="stylesheet" href="asset/bootsrap/css/bootstrap.min.css">
+  <!-- Load CSS Login -->
+  <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+  <div class="login-card">
+    <!-- <h2 class="header"> Sign In :</h2> -->
+    <img src="asset/img/1635752575570.jpg" class='logo' alt="">
+    <hr><div class="alert"></div>
+
+    <!-- form sign in -->
+    <form onSubmit="ProcessSignIn(event)" class="signin-form">
+      <label for="SignInUsername">Username :</label>
+      <input type="text" id="SignInUsername" placeholder="Entry your username">
+      <label for="SignInPassword">Password :</label>
+      <input type="password" id="SignInPassword" placeholder="Entry your password">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="remember" >
+        <label class="form-check-label" for="remember">
+          Remember me
+        </label>
+      </div>
+      <a href="#" id="ForgetPassword">Forgot Password?</a>
+      <button type="submit">Sign In</button>
+    </form>
+
+    <!-- form sign up -->
+    <form onSubmit="ProcessSignUp(event)" class="signup-form">
+      <label for="SignUpUsername">Username :</label>
+      <input type="text" id="SignUpUsername" placeholder="Entry your username">
+      <label for="SignUpPassword1">Password :</label>
+      <input type="password" id="SignUpPassword1" placeholder="Entry your password">
+      <label for="SignUpPassword2">Confirm Password :</label>
+      <input type="password" id="SignUpPassword2" placeholder="Re-entry your password">
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <!-- form change password -->
+    <form onsubmit="ProssesChangePassword(event)" class="change-password-form">
+      <label for="ChangeUsername">Username :</label>
+      <input type="text" id="ChangeUsername" placeholder="Entry your username">
+      <label for="ChangePassword1">New Password :</label>
+      <input type="password" id="ChangePassword1" placeholder="Entry your new password">
+      <label for="ChangePassword2">Confirm New Password :</label>
+      <input type="password" id="ChangePassword2" placeholder="Re-entry your new password">
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p class="sign-in">Already have an account? <a href="#" id="SignIn">Sign In</a></p>
+    <p class="sign-up">Dont have an account? <a href="#" id="SignUp">Sign Up</a></p>
+  </div>
+
+  
+</body>
+<!-- Load bootstrap JS -->
+<script src="asset/bootsrap/js/bootstrap.min.js"></script>
+<!-- load Jquery -->
+<script src="asset/Jquery/jquery-3.6.0.js"></script>
+<!-- load JS -->
+<script src="asset/js/login-forms.js"></script>
+<script src="asset/js/login.js"></script>
+</html>

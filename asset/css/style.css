@@ -1,0 +1,459 @@
+/* swatcher colour 
+#292560 Background
+#4a4a4d Text
+#f95f5f Input
+*/
+
+
+body {
+    background: #292560;
+    color: #4a4a4d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    height: 100%;
+}
+
+.login-card {
+    background-color: white;
+    width: 500px;
+    padding: 10px 30px 60px 30px;
+    margin: 10% auto;
+    border-radius: 10px;
+}
+
+.login-card .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-card .header {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.login-card label {
+    margin: 10px auto;
+}
+
+::placeholder {
+    color: #9ca3af;
+    opacity: 0.5;
+}
+
+input[type=text],
+[type=password],[type=date] {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #c0c0c0;
+    border: 1px solid #c0c0c0;
+    width: 100%;
+}
+
+input[type=text]:hover,
+[type=password]:hover {
+    color: #4a4a4d;
+    border: 1px solid #4a4a4d;
+}
+
+input[type=text]:focus,
+[type=password]:focus {
+    color: #4a4a4d;
+    border: 1px solid #4a4a4d;
+}
+
+.form-check-input {
+    margin-top: 12px;
+}
+
+.form-check-input:checked {
+    background-color: #f95f5f;
+    border-color: #f95f5f;
+}
+
+.login-card .form-check label {
+    user-select: none;
+}
+
+.login-card a {
+    text-decoration: none;
+}
+
+.login-card p {
+    text-align: center;
+}
+
+.login-card #ForgetPassword {
+    display: block;
+    font-size: 12px;
+    text-align: right;
+}
+
+button {
+    background-color: #f95f5f;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    filter: brightness(0.85);
+}
+
+.login-card button {
+    display: block;
+    margin: 20px auto;
+    border-radius: 30px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.wraper {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: white;
+    width: 250px;
+    height: 100%;
+    color: #c0c0c0;
+    font-weight: 600;
+
+}
+
+.sidebar .logo {
+    width: 250px;
+    padding: 20px 40px;
+}
+
+.sidebar .list-menu {
+    list-style: none;
+    padding: 10px 0px;
+}
+
+
+.sidebar .list-menu li {
+    list-style: none;
+    padding: 10px 30px;
+}
+
+.sidebar .list-menu li a {
+    text-decoration: none;
+    color: #c0c0c0;
+}
+
+.sidebar .list-menu .menu-item:hover {
+    border-left: 5px solid #f95f5f;
+    color: #f95f5f;
+}
+
+.sidebar .list-menu .menu-item:hover a {
+    color: #f95f5f;
+}
+
+.sidebar .list-menu li i {
+    margin-right: 20px;
+}
+
+.sidebar .list-menu .active {
+    border-left: 5px solid #f95f5f;
+    color: #f95f5f;
+}
+
+.sidebar .list-menu .active a {
+    color: #f95f5f;
+}
+
+.sidebar .list-menu .menu-title {
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.sidebar .list-menu .ender {
+    height: 100%;
+}
+
+.container {
+    padding: 0px 50px;
+}
+
+.container .header {
+    margin-top: 30px;
+    color: white;
+    display: flex;
+}
+
+.container .header .fa-bell {
+    padding: 10px 20px
+}
+
+.container .header h2 {
+    font-weight: 500;
+}
+
+.header .user-content {
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    height: 50px;
+    width: 50px;
+}
+.user-content .user{
+    margin: 0px 20px;
+}
+
+.img-circle {
+    border-radius: 500px;
+}
+
+.header .page-info {
+    width: 100%;
+}
+
+.card {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 18px;
+    padding: 20px 20px;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.table-header h3 {
+    color: #292560;
+    font-weight: 700;
+    width: 100%;
+}
+
+.table-header input[type=text] {
+    height: 50px;
+    width: 500px;
+    background-color: #f0f0f0;
+}
+
+.table-footer {
+    display: flex;
+    align-items: center;
+}
+
+.showing {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.table-footer p {
+    margin: auto;
+}
+
+.table-footer .form-select {
+    width: 100px;
+    margin: auto 10px;
+}
+
+.pagination {
+    display: flex;
+    width: 700px;
+    justify-items: end;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #f95f5f;
+    color: white;
+    border-radius: 30px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 30px;
+}
+.pagination .fa-chevron-left{
+    margin-right: 10px;
+}
+.pagination .fa-chevron-right{
+    margin-left: 10px;
+}
+
+#gender{
+    width: 150px;
+}
+
+#address{
+    width: 60%;
+}
+
+
+#addCustomer{
+    width: 300px;
+}
+
+.btn-customer{
+    background-color: #f95f5f;
+    border: #f95f5f;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+.btn-customer:hover {
+    opacity: 0.9;
+}
+
+.btn-customer:active {
+    filter: brightness(0.85);
+}
+
+.table-header .form-select {
+    margin: auto 10px;
+}
+
+.breadcrump{
+    display: flex;
+    align-items: center;
+    color: #f95f5f;
+    font-weight: 700;
+}
+.breadcrump .active{
+    display: flex;
+    align-items: center;
+    color: #292560;
+}
+
+.breadcrump .fa-chevron-right{   
+    color: black;
+    margin: 0px 10px;
+}
+
+.form-customer{
+    display: flex;
+    width: 100%;
+}
+
+.form-customer .left-col{
+    width: 20%;
+    margin-right: 20px;
+}
+
+.form-customer .left-col img{
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.secondary-btn {
+    background-color: #f4f4f4;
+    color: #9da7bb;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+.form-customer .mid-col{
+    width: 40%;
+    flex-flow: column;
+    display: flex;
+}
+.form-customer .right-col{
+    width: 40%;
+}
+
+.form-customer label{
+    color: #9ca3af;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.form-customer input{
+    color: #9ca3af;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.form-customer span{
+    color: red;
+    font-size: 14px;
+    float: right;
+}
+.form-customer .mid-col .form-check {
+    display: flex;
+    align-items: center;
+}
+.form-customer .mid-col .form-check label{
+    font-size: 14px;
+    color: black;
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.form-group-check{
+    margin-top: -10px;
+    display: flex;
+}
+
+.form-customer .form-group .form-select {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #c0c0c0;
+    border: 1px solid #c0c0c0;
+    width: 100px;
+    margin-bottom: 20px;
+}
+#identity{
+    width: 100%;
+}
+
+.input-group #kodeNumber{
+    width: 10px;
+}
+
+.input-group #phoneNumber{
+    width: 68%;
+}
+.form-customer .form-group{
+    margin: 0px 10px;
+}
+
+.form-customer textarea{
+    display: block;
+    border-radius: 10px;
+    color: #c0c0c0;
+    border: 1px solid #c0c0c0;
+    margin-bottom: 20px;
+    resize: none;
+    padding: 10px 15px;
+}
+
+.form-customer #address{
+    width:100% ;
+}
+
+.form-customer #detailAddress{
+    width:100% ;
+}
+
+.form-customer #addCustomerData{
+    float: right;
+}

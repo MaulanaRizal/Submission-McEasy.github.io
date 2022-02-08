@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McEasy | Table</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.4/datatables.min.css" />
+    <!-- Load Font Awesome 5 -->
+    <link rel="stylesheet" href="../asset/fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- load CSS Bootsrap -->
+    <link rel="stylesheet" href="../asset/bootsrap/css/bootstrap.min.css">
+    <!-- Load CSS Login -->
+    <link rel="stylesheet" href="../asset/css/style.css">
+</head>
+
+<body>
+    <div class="wraper">
+        <div class="sidebar">
+            <!-- <h2>Sidebar</h2> -->
+            <a href=""><img src="../asset/img/logo2.png" alt="Mc Easy" class="logo"></a>
+            <ul class="list-menu">
+                <li class="menu-item"><a href="#"><i class="fas fa-home"></i>Dasboard</a></li>
+                <li class="menu-title">Main Menu</li>
+                <li class="menu-item"><a href="#"><i class="fas fa-chart-line"></i>Analitics</a></li>
+                <li class="menu-item active"><a href="../pages/tabel-customers.html"><i class="fas fa-user-friends"></i>Customers</a></li>
+                <li class="menu-item"><a href="#"><i class="fas fa-tag"></i>Products</a></li>
+                <li class="menu-item"><a href="#"><i class="fas fa-shopping-cart"></i>Orders</a></li>
+                <li class="menu-item"><a href="#"><i class="fas fa-file-alt"></i>Reports</a></li>
+                <li class="menu-title">Help</li>
+                <li class="menu-item"><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+                <li class="menu-item"><a href="#"><i class="fas fa-headset"></i>Supports</a></li>
+                <li class="ender"></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="header">
+                <div class="page-info">
+                    <h2>Add New Customers</h2>
+                    <p>Fill the form to add new customers.</p>
+                </div>
+                <div class="user-content">
+                    <i class="far fa-bell fa-2x"></i>
+                    <img src="../asset/img/user.png" class="img-circle" alt="">
+                    <h5 class="user">Nabila</h5>
+                    <i class="fas fa-chevron-down fa-2x"></i>
+                </div>
+            </div>
+            <div class="card">
+                <div class="breadcrump">
+                    <h4>Customer<i class="fas fa-chevron-right"></i></h4>
+                    <h4 class="active">Add New Customer</h4>
+                </div>
+                <div class="form-customer">
+                    <div class="left-col">
+                        <img src="../asset/img/upload.png" alt="">
+                        <button class="secondary-btn">Upload</button>
+                        <button class="secondary-btn">Remove</button>
+                    </div>
+                    <div class="mid-col">
+                        <div class="form-group">
+                            <label for="fullname">FILL NAME</label>
+                            <span>*require</span>
+                            <input type="text" class="form-control" placeholder="Enter full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">GENDER</label>
+                            <span>*require</span>
+                            <div class="form-group-check">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="male">
+                                    <label class="form-check-label" for="male">Male</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="female" checked>
+                                    <label class="form-check-label" for="female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">DATE OF BIRTH</label>
+                            <span>*require</span>
+                            <input type="date" class="form-control" placeholder="dd-mm-yyyy">
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">IDENTITY TYPE</label>
+                            <span>*require</span>
+                            <select class="form-select" id="identity">
+                                <option>KTP/SIM/OTHER</option>
+                                <option value="KTP">KTP</option>
+                                <option value="SIM">SIM</option>
+                                <option value="OTHER">OTHER</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">IDENTITY NUMBER</label>
+                            <span>*require</span>
+                            <input type="text" class="form-control" placeholder="Enter identity number">
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">EMAIL</label>
+                            <span>*require</span>
+                            <input type="text" class="form-control" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">PHONE NUMBER</label>
+                            <span>*require</span>
+                            <div class="input-group">
+                                <select class="form-select" id="kodeNumber">
+                                    <option value="+61">+60</option>
+                                    <option value="+60">+61</option>
+                                    <option value="+62" selected>+62</option>
+                                </select>
+                                <input type="text" class="form-control" id="phoneNumber"
+                                    placeholder="Enter phone number">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="right-col">
+                        <div class="form-group">
+                            <label for="fullname">FILL NAME</label>
+                            <span>*require</span>
+                            <textarea name="" id="address" cols="30" rows="3" placeholder="Enter address"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">DETAIL ADDRESS</label>
+                            <span>*require</span>
+                            <textarea name="" id="detailAddress" cols="30" rows="2" placeholder="Enter details address: (Street, Block, Number,etc)"></textarea>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1174.8673712529128!2d112.59555185670722!3d-7.919384901043353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78818b2e1a1555%3A0xbd7b5a20b30efc24!2sUMM%20Dome!5e0!3m2!1sen!2sid!4v1644351265001!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <!-- <input type="text" class="form-control" placeholder="Enter details address: (Street, Block, Number,etc)"> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">INSTAGRAM</label>
+                            <span>*require</span>
+                            <input type="text" class="form-control" placeholder="Enter instagram">
+                        </div>
+                        <button id="addCustomerData">Add Customer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+<!-- Load bootstrap JS -->
+<script src="../asset/bootsrap/js/bootstrap.min.js"></script>
+<!-- load Jquery -->
+<script src="../asset/Jquery/jquery-3.6.0.js"></script>
+<!-- load JS -->
+<script>
+    function myMap() {
+    var mapProp= {
+      center:new google.maps.LatLng(51.508742,-0.120850),
+      zoom:5,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</html>
