@@ -8,10 +8,15 @@ if (localStorage.getItem('Users') === null) {
 const WarningMessage = (type, problem) => {
     console.log(problem)
     if (problem !== undefined) {
+        if(type==="alert-warning"){
+            $('.alert').removeClass('alert-success')
+        }else{
+            $('.alert').removeClass('alert-warning')
+        }
         $('.alert').addClass(type)
         $('.alert').html(problem)
         $('.alert').show('slow').delay(3000).hide('slow');
-        $('.alert').removeClass(type);
+        
 
     }
 }
@@ -45,10 +50,11 @@ let ProcessSignUp = (event) => {
     const username = $('#SignUpUsername').val();
     const password1 = $('#SignUpPassword1').val();
     const password2 = $('#SignUpPassword2').val();
-
     if (password1 !== password2) {
-        WarningMessage('<b>Password are not the same</b> : Please re enter your password.')
-    } else {
+        console.log('apa?')
+        WarningMessage('alert-warning','<b>Password are not the same</b> : Please re enter your password.');
+    }    
+    else {
         const users = JSON.parse(localStorage.getItem('Users'));
         if(users==null){
             const newUser = [{
@@ -60,16 +66,14 @@ let ProcessSignUp = (event) => {
             $('#SignUpPassword1').val('');
             $('#SignUpPassword2').val('');
             localStorage.setItem('Users', JSON.stringify(newUser));
-            WarningMessage('alert-success', 'Success : New user has been added.');
+            WarningMessage('alert-success', '<b>Success</b> : New user has been added.');
             ShowSignInForm();
         }else{
             for (let i = 0; i < users.length; i++) {
                 if (users[i].username === username) {
                     var similarity = false;
-                    WarningMessage('alert-success', '<b>Username Already Registered</b> : Username your enter is already registered.');
-                } else if (username === '' || password1 === '' || password2 === '') {
-                    var problem = '<b>Form Cannot Be Empty</b> : Please fill in the form according to your data.';
-                }
+                    var problem = '<b>Username is already registered </b>: Your username is already registered.';
+                } 
             }
             WarningMessage('alert-warning', problem);
             if (similarity !== false) {
@@ -98,7 +102,7 @@ let ProssesChangePassword = (event) => {
     const password2 = $('#ChangePassword2').val();
 
     if (password1 !== password2) {
-        WarningMessage('<b>Password are not the same</b> : Please re enter your password.')
+        WarningMessage('alert-warning','<b>Password are not the same</b> : Please re enter your password.');
     } else {
         const users = JSON.parse(localStorage.getItem('Users'));
         for (let i = 0; i < users.length; i++) {
@@ -107,11 +111,11 @@ let ProssesChangePassword = (event) => {
                 WarningMessage('alert-success', 'Success : Your password successfully changed.');
                 ShowSignInForm();
                 $('.change-password-form').hide('slow');
-            } else if (username === '' || password1 === '' || password2 === '') {
-                var problem = '<b>Form Cannot Be Empty</b> : Please fill in the form according to your data.';
+            }else{
+                var problem = '<b>User Not Found</b> : Username you entered is not registered.';
             }
         }
-        WarningMessage(problem);
+        WarningMessage('alert-warning',problem);
         localStorage.setItem('Users', JSON.stringify(users));
         console.log(users)
     }
