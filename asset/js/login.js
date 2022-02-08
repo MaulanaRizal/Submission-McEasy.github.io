@@ -11,6 +11,8 @@ const WarningMessage = (type, problem) => {
         $('.alert').addClass(type)
         $('.alert').html(problem)
         $('.alert').show('slow').delay(3000).hide('slow');
+        $('.alert').removeClass(type);
+
     }
 }
 
@@ -61,7 +63,6 @@ let ProcessSignUp = (event) => {
             WarningMessage('alert-success', 'Success : New user has been added.');
             ShowSignInForm();
         }else{
-
             for (let i = 0; i < users.length; i++) {
                 if (users[i].username === username) {
                     var similarity = false;
