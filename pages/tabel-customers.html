@@ -24,7 +24,8 @@
         <li class="menu-item"><a href="#"><i class="fas fa-home"></i>Dasboard</a></li>
         <li class="menu-title">Main Menu</li>
         <li class="menu-item"><a href="#"><i class="fas fa-chart-line"></i>Analitics</a></li>
-        <li class="menu-item active"><a href="../pages/tabel-customers.html"><i class="fas fa-user-friends"></i>Customers</a></li>
+        <li class="menu-item active"><a href="../pages/tabel-customers.html"><i
+              class="fas fa-user-friends"></i>Customers</a></li>
         <li class="menu-item"><a href="#"><i class="fas fa-tag"></i>Products</a></li>
         <li class="menu-item"><a href="#"><i class="fas fa-shopping-cart"></i>Orders</a></li>
         <li class="menu-item"><a href="#"><i class="fas fa-file-alt"></i>Reports</a></li>
@@ -40,12 +41,20 @@
           <h2>Customers</h2>
           <p>Manage your customers here.</p>
         </div>
-                <div class="user-content">
-                    <i class="far fa-bell fa-2x"></i>
-                    <img src="../asset/img/user.png" class="img-circle" alt="">
-                    <h5 class="user">Nabila</h5>
-                    <i class="fas fa-chevron-down fa-2x"></i>
-                </div>
+        <div class="user-content">
+          <i class="far fa-bell fa-2x"></i>
+          <img src="../asset/img/user.png" class="img-circle" alt="">
+          <h5 class="user">Nabila</h5>
+          <i class="fas fa-chevron-down fa-2x" id="dropdownUser"></i>
+          <div class="dropdown-user">
+            <div class="dropdown-content">
+              <img src="../asset/img/user.png" alt="" >
+              <h5>Nabila Aqmarina</h5>
+              <p>Adminsitrator</p>
+              <a href="../index.html">Log Out</a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="card">
         <div class="table-header">
@@ -66,7 +75,8 @@
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
-          <a href="../pages/add-customer.html" id="addCustomer" class="btn btn-customer"><i class="fas fa-plus"></i> Add Customer</a>
+          <a href="../pages/add-customer.html" id="addCustomer" class="btn btn-customer"><i class="fas fa-plus"></i> Add
+            Customer</a>
         </div>
         <hr>
         <table class="table">
@@ -243,4 +253,5 @@
 <script src="../asset/Jquery/jquery-3.6.0.js"></script>
 <!-- load JS -->
 <script src="../asset/js/table-customer.js"></script>
+
 </html>

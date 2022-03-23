@@ -10,7 +10,6 @@ body {
     color: #4a4a4d;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    height: 100%;
 }
 
 .login-card {
@@ -117,14 +116,14 @@ button:active {
 .wraper {
     display: flex;
     flex-wrap: nowrap;
-    position: relative;
-    height: 100vh;
+    position: fixed;
+    height: 100%;
+    width: 100%;
 }
 
 .sidebar {
-    background-color: white;
     width: 250px;
-    height: 100%;
+    background-color: white;
     color: #c0c0c0;
     font-weight: 600;
 
@@ -184,7 +183,9 @@ button:active {
 }
 
 .container {
-    padding: 0px 50px;
+    padding: 0px 30px;
+    margin : 0 auto ;
+    width: 100%;
 }
 
 .container .header {
@@ -333,10 +334,17 @@ button:active {
 
 .breadcrump{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     color: #f95f5f;
     font-weight: 700;
 }
+
+.breadcrump a{
+    text-decoration: none;
+    color: #f95f5f;
+    font-weight: 700;
+}
+
 .breadcrump .active{
     display: flex;
     align-items: center;
@@ -456,4 +464,55 @@ button:active {
 
 .form-customer #addCustomerData{
     float: right;
+}
+
+.user-content  #dropdownUser.down{
+    transform:rotate(180deg);
+}
+
+.user-content #dropdownUser:hover{
+    opacity: 0.7;
+}
+
+.user-content .dropdown-user{
+    color: black;
+    position: relative;
+    /* display: inline-block; */
+    display: none;
+}
+
+.user-content .dropdown-user.show{
+    display: inline-block;
+}
+
+.user-content .dropdown-content{
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    right: 0px;
+    top: 20px;
+    width: 200px;
+    z-index: 1;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 5px 0px 5px 5px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+
+.user-content .dropdown-user .dropdown-content img{
+    margin-bottom: 10px;
+    width: 80%;
+    height: auto;
+}
+
+.user-content .dropdown-user .dropdown-content a{
+    text-decoration: none;
+    padding: 0px 50px ;
+    color: #f95f5f;
+}
+
+.user-content .dropdown-user .dropdown-content a:hover{
+    font-weight: 600;
 }
